@@ -1,3 +1,4 @@
+"use client";
 import {
   House,
   Inbox,
@@ -41,6 +42,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "./ui/collapsible";
+import { useEffect, useState } from "react";
 
 const items = [
   {
@@ -50,27 +52,34 @@ const items = [
   },
   {
     title: "Inbox",
-    url: "#",
+    url: "",
     icon: Inbox,
   },
   {
     title: "Calendar",
-    url: "#",
+    url: "",
     icon: Calendar,
   },
   {
     title: "Search",
-    url: "#",
+    url: "",
     icon: Search,
   },
   {
     title: "Settings",
-    url: "#",
+    url: "",
     icon: Settings,
   },
 ];
 
 const AppSidebar = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader className="py-4">
@@ -116,7 +125,7 @@ const AppSidebar = () => {
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <Link href="/#">
+                  <Link href="/">
                     <Projector />
                     See All Projects
                   </Link>
@@ -124,7 +133,7 @@ const AppSidebar = () => {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <Link href="/#">
+                  <Link href="/">
                     <Plus />
                     Add Project
                   </Link>
@@ -134,7 +143,7 @@ const AppSidebar = () => {
           </SidebarGroupContent>
         </SidebarGroup>
         {/* COLLAPSABLE */}
-        <Collapsible defaultOpen className="group/collapsible">
+        <Collapsible className="group/collapsible">
           <SidebarGroup>
             <SidebarGroupLabel asChild>
               <CollapsibleTrigger>
@@ -147,7 +156,7 @@ const AppSidebar = () => {
                 <SidebarMenu>
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
-                      <Link href="/#">
+                      <Link href="/">
                         <Projector />
                         See All Projects
                       </Link>
@@ -155,7 +164,7 @@ const AppSidebar = () => {
                   </SidebarMenuItem>
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
-                      <Link href="/#">
+                      <Link href="/">
                         <Plus />
                         Add Project
                       </Link>
@@ -173,7 +182,7 @@ const AppSidebar = () => {
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <Link href="/#">
+                  <Link href="/">
                     <Projector />
                     See All Projects
                   </Link>
@@ -181,7 +190,7 @@ const AppSidebar = () => {
                 <SidebarMenuSub>
                   <SidebarMenuSubItem>
                     <SidebarMenuSubButton asChild>
-                      <Link href="/#">
+                      <Link href="/">
                         <Plus />
                         Add Project
                       </Link>
@@ -189,7 +198,7 @@ const AppSidebar = () => {
                   </SidebarMenuSubItem>
                   <SidebarMenuSubItem>
                     <SidebarMenuSubButton asChild>
-                      <Link href="/#">
+                      <Link href="/">
                         <Plus />
                         Add Category
                       </Link>

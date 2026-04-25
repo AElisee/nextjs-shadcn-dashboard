@@ -11,12 +11,13 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useTheme } from "next-themes";
+import { useTheme } from "@teispace/next-themes";
 import { Button } from "./ui/button";
 import { SidebarTrigger } from "./ui/sidebar";
 
 const Navbar = () => {
   const { setTheme } = useTheme();
+
   return (
     <div className="p-4 flex items-center justify-between">
       {/* LEFT */}
