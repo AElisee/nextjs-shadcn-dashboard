@@ -3,14 +3,7 @@ import React, { useState } from "react";
 import { ScrollArea } from "./ui/scroll-area";
 import { Card } from "./ui/card";
 import { Checkbox } from "./ui/checkbox";
-import {
-  Popover,
-  PopoverContent,
-  PopoverDescription,
-  PopoverHeader,
-  PopoverTitle,
-  PopoverTrigger,
-} from "./ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { Button } from "./ui/button";
 import { Calendar1Icon } from "lucide-react";
 import { format } from "date-fns";
