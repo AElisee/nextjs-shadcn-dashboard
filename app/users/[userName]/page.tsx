@@ -175,7 +175,7 @@ const SingleUserPage = () => {
           {/* CHART CONTAINER */}
           <div className="bg-primary-foreground p-4 rounded-lg">
             <h1 className="text-xl font-semibold">User Activity</h1>
-            {/* <AppLineChart /> */}
+            <AppLineChart />
           </div>
         </div>
       </div>

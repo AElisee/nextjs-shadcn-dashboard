@@ -1,8 +1,8 @@
 import CardList from "@/components/CardList";
 import TodoList from "@/components/TodoList";
-import { Appareachart } from "@/components/ui/Appareachart";
-import AppBarchart from "@/components/ui/AppBarchart";
-import { Apppiechart } from "@/components/ui/Apppiechart";
+import { Appareachart } from "@/components/Appareachart";
+import AppBarchart from "@/components/AppBarchart";
+import { Apppiechart } from "@/components/Apppiechart";
 
 export default function Home() {
   return (

@@ -16,7 +16,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "./card";
+} from "./ui/card";
 
 export const description = "An area chart with gradient fill";
 
